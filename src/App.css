@@ -29,7 +29,8 @@
 }
 
 .github-profile {
-  margin: 1rem;
+  margin-left: 10%;
+  padding: 10px;
 }
 .github-profile img {
   width: 75px;
@@ -53,7 +54,7 @@ form {
   justify-content: center;
 }
 input[type="text"] {
-  width: 100%;
+  width: 30%;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -63,6 +64,18 @@ input[type="text"] {
   text-align: center;
   font-size: 1.5rem;
   margin-bottom: 1rem;
+}
+
+button {
+  border-radius: 4px;
+  width: 100px;
+  background: linear-gradient(to right, rgb(12, 11, 11), rgb(15, 155, 15));
+  color: white !important;
+  padding: 14px 20px;
+  cursor: pointer;
+}
+button:hover {
+  background: linear-gradient(to left, rgb(155, 92, 92), rgb(116, 124, 8));
 }
 
 @keyframes App-logo-spin {
