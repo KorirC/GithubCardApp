@@ -15,12 +15,23 @@ class Card extends React.Component {
     const profile = this.props;
     return (
       <div className="github-profile">
-        <img src={profile.avatar_url} alt="" />
-        <div className="info">
-          <div className="name">{profile.name}</div>
-          <div className="company">{profile.company}</div>
-          <div className="followers">{profile.followers}</div>
-        </div>
+        <table id="user">
+          <tbody>
+            <tr>
+              <th></th>
+            </tr>
+            <tr key={profile.id}>
+              <td>
+                <img src={profile.avatar_url} alt="" />
+                <div className="info">
+                  <div className="name">{profile.name}</div>
+                  <div className="company">{profile.company}</div>
+                  <div className="followers">{profile.followers}</div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     );
   }
