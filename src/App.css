@@ -32,29 +32,35 @@
   margin: 1rem;
 }
 .github-profile img {
-    width: 75px;
+  width: 75px;
 }
 
 .github-profile .info {
-    display: inline-block;
-    margin-left: 12px;
+  display: inline-block;
+  margin-left: 12px;
 }
 .github-profile .info .name {
-    	font-size: 1.25rem;
-      font-weight: bold;
+  font-size: 1.25rem;
+  font-weight: bold;
 }
 
 form {
-	border: thin solid #ddd;
+  border: thin solid #ddd;
   background-color: #fbfbfb;
   padding: 2rem;
   margin-bottom: 2rem;
   display: flex;
   justify-content: center;
 }
-
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
 .header {
-	text-align: center;
+  text-align: center;
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
