@@ -7,16 +7,16 @@ const RollIn = styled.div`
   animation: 1s ${keyframes`${rollIn}`};
 `;
 const CardList = (props) => (
-    <div>
-      {props.profiles.map((profile) => (
-        <RollIn key={profile.id}>
-          <Card
-            key={profile.id}
-            {...profile}
-            removeProfile={props.removeProfile}
-          />
-        </RollIn>
-      ))}
-    </div>
-  );
-  export default CardList;
+  <div>
+    {props.profiles.map((profile) => (
+      <RollIn key={profile.id}>
+        <Card
+          key={profile.id}
+          {...profile}
+          removeProfile={props.removeProfile}
+        />
+      </RollIn>
+    ))}
+  </div>
+);
+export default CardList;

@@ -20,11 +20,11 @@ class App extends React.Component {
     }));
   };
 
+  //remove from profile list
   removeFromProfiles = (id) => {
     this.setState({
       profiles: this.state.profiles.filter((item) => item.id !== id),
     });
-
     console.log(id);
   };
 
