@@ -11,6 +11,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.removeFromProfiles = this.removeFromProfiles.bind(this);
+    this.handleCheck = this.handleCheck.bind(this);
   }
 
   // add new profile
@@ -28,12 +29,17 @@ class App extends React.Component {
     console.log(id);
   };
 
+  //check duplicates
+  handleCheck=(val)=> {
+    return this.state.profiles.some(item => item.name === val);
+ };
+
   render() {
     return (
       <div>
         <div className="header">{this.props.title}</div>
         
-        <Form onSubmit={this.addNewProfile} />
+        <Form onSubmit={this.addNewProfile} onCheck={this.handleCheck} />
         <span><h4>Users Listed: {this.state.profiles.length}</h4></span>
         <CardList
           profiles={this.state.profiles}
