@@ -6,9 +6,6 @@ class Form extends React.Component {
   handleSubmit = async (event) => {
     event.preventDefault();
 
-    const res = ()=>{this.props.onCheck(this.state.userName)}
-
-    if(res){
     await axios
       .get(`https://api.github.com/users/${this.state.userName}`)
       .then((response) => {
@@ -23,8 +20,7 @@ class Form extends React.Component {
           console.log(error.response.headers);
         }
       });
-    }
-    
+
     this.setState({ userName: "" });
   };
 
