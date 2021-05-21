@@ -17,8 +17,8 @@ class Card extends React.Component {
                   <img src={profile.avatar_url} alt="" />
                   <div className="info">
                     <div className="name">{profile.name}</div>
-                    <div className="company">{profile.company}</div>
-                    <div className="followers">{profile.followers}</div>
+                    <div className="company">Company: {profile.company}</div>
+                    <div className="followers">Followers: {profile.followers}</div>
                   </div>
                 </td>
               </tr>

@@ -23,7 +23,7 @@ class App extends React.Component {
   //remove from profile list
   removeFromProfiles = (id) => {
     this.setState({
-      profiles: this.state.profiles.filter((item) => item.id !== id),
+      profiles: this.state.profiles.filter((profile) => profile.id !== id),
     });
     console.log(id);
   };
@@ -32,7 +32,9 @@ class App extends React.Component {
     return (
       <div>
         <div className="header">{this.props.title}</div>
+        
         <Form onSubmit={this.addNewProfile} />
+        <span><h4>Users Listed: {this.state.profiles.length}</h4></span>
         <CardList
           profiles={this.state.profiles}
           removeProfile={this.removeFromProfiles}

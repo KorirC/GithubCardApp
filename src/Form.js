@@ -10,7 +10,7 @@ class Form extends React.Component {
       .get(`https://api.github.com/users/${this.state.userName}`)
       .then((response) => {
         this.props.onSubmit(response.data);
-        console.log(response.data.id);
+        console.log(response.data);
       })
       .catch(function (error) {
         if (error.response) {
